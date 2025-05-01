@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About Alyra - Sustainable Fashion</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Lora&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <style>
+    body {
+      font-family: 'Lora', serif;
+      background: #f0efe9;
+      color: #2a3a2a;
+    }
+    .timeline-line {
+      border-left: 3px solid #3b7a57;
+      height: 100%;
+      position: absolute;
+      left: 20px;
+      top: 0;
+    }
+    .timeline-item {
+      position: relative;
+      padding-left: 60px;
+      margin-bottom: 3rem;
+    }
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: 10px;
+      top: 0;
+      width: 20px;
+      height: 20px;
+      background-color: #3b7a57;
+      border-radius: 50%;
+      border: 3px solid #d9e6d2;
+    }
+    .team-member {
+      transition: transform 0.3s ease;
+    }
+    .team-member:hover {
+      transform: scale(1.1);
+      z-index: 10;
+    }
+  </style>
+</head>
+<body class="bg-gradient-to-b from-teal-100 via-green-100 to-sand-100 min-h-screen">
+  <header class="sticky top-0 bg-green-50 bg-opacity-90 backdrop-blur-md shadow-md z-50">
+    <nav class="container mx-auto flex items-center justify-between py-4 px-6">
+      <div class="text-3xl font-dm-serif font-semibold text-green-800 select-none">ALYRA</div>
+      <ul class="flex space-x-8 text-green-700 font-semibold text-lg">
+        <li><a href="index.html#home" class="flex items-center space-x-2"><i class="fas fa-home"></i><span>Home</span></a></li>
+        <li><a href="about.html" class="flex items-center space-x-2"><i class="fas fa-info-circle"></i><span>About</span></a></li>
+        <li><a href="collection.html" class="flex items-center space-x-2"><i class="fas fa-tshirt"></i><span>Collection</span></a></li>
+        <li><a href="sustainability.html" class="flex items-center space-x-2"><i class="fas fa-leaf"></i><span>Sustainability</span></a></li>
+        <li><a href="contact.html" class="flex items-center space-x-2"><i class="fas fa-envelope"></i><span>Contact</span></a></li>
+        <li><a href="cart.html" class="flex items-center space-x-2"><i class="fas fa-shopping-cart"></i><span>Cart</span></a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container mx-auto px-6 py-12">
+    <section aria-label="Our Vision" class="mb-20">
+      <h2 class="text-4xl font-dm-serif text-ocean-teal mb-8 text-center">Our Vision</h2>
+      <p class="text-green-700 max-w-3xl mx-auto text-center">
+        Founded in 2025, Alyra is a pioneering startup dedicated to transforming fashion through algae-based innovation. We envision a future where sustainability and style coexist harmoniously, creating clothing that nurtures both people and the planet.
+      </p>
+    </section>
+
+    <section aria-label="Meet the Team" class="mb-20">
+      <h2 class="text-4xl font-dm-serif text-ocean-teal mb-8 text-center">Meet the Team</h2>
+      <div class="flex flex-wrap justify-center gap-8">
+        <div class="team-member w-32 h-32 rounded-full overflow-hidden cursor-pointer shadow-lg">
+          <img src="assets/images/team1.jpg" alt="Jane Doe - Founder" class="w-full h-full object-cover" />
+          <div class="hidden group-hover:block absolute bg-green-100 p-4 rounded shadow-lg mt-2 text-green-900">
+            <p><strong>Jane Doe</strong></p>
+            <p>Founder & CEO</p>
+          </div>
+        </div>
+        <div class="team-member w-32 h-32 rounded-full overflow-hidden cursor-pointer shadow-lg">
+          <img src="assets/images/team2.jpg" alt="John Smith - Designer" class="w-full h-full object-cover" />
+          <div class="hidden group-hover:block absolute bg-green-100 p-4 rounded shadow-lg mt-2 text-green-900">
+            <p><strong>John Smith</strong></p>
+            <p>Lead Designer</p>
+          </div>
+        </div>
+        <div class="team-member w-32 h-32 rounded-full overflow-hidden cursor-pointer shadow-lg">
+          <img src="assets/images/team3.jpg" alt="Emily Johnson - Sustainability Lead" class="w-full h-full object-cover" />
+          <div class="hidden group-hover:block absolute bg-green-100 p-4 rounded shadow-lg mt-2 text-green-900">
+            <p><strong>Emily Johnson</strong></p>
+            <p>Sustainability Lead</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section aria-label="Sustainability Practices" class="mb-20">
+      <h2 class="text-4xl font-dm-serif text-ocean-teal mb-8 text-center">Sustainability Practices</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+        <div>
+          <i class="fas fa-water fa-3x text-ocean-teal mb-4"></i>
+          <h3 class="text-xl font-semibold text-green-800">Water Conservation</h3>
+          <p class="text-green-700">Using low-impact dyeing and water-saving technologies in production.</p>
+        </div>
+        <div>
+          <i class="fas fa-leaf fa-3x text-algae-green mb-4"></i>
+          <h3 class="text-xl font-semibold text-green-800">Eco-Friendly Materials</h3>
+          <p class="text-green-700">Algae-based fabrics and recycled fibers to reduce environmental footprint.</p>
+        </div>
+        <div>
+          <i class="fas fa-recycle fa-3x text-seafoam-beige mb-4"></i>
+          <h3 class="text-xl font-semibold text-green-800">Circular Fashion</h3>
+          <p class="text-green-700">Commitment to recycling and upcycling to minimize waste.</p>
+        </div>
+      </div>
+    </section>
+
+    <section aria-label="Mission Statement" class="mb-20">
+      <h2 class="text-4xl font-dm-serif text-ocean-teal mb-8 text-center">Our Mission</h2>
+      <p class="text-green-700 max-w-3xl mx-auto text-center mb-12">
+        At Alyra, our mission is to revolutionize the fashion industry by creating sustainable, algae-based textiles that nurture both people and the planet. We are committed to innovation, ethical practices, and inspiring a greener future.
+      </p>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-6xl mx-auto">
+        <section aria-label="Blog Section" class="bg-white rounded-lg shadow-lg p-6">
+          <h3 class="text-2xl font-semibold text-green-800 mb-4">Latest Blogs on Algae Fabrics</h3>
+          <ul class="list-disc list-inside text-green-700 space-y-2">
+            <li><a href="#" class="text-ocean-teal hover:underline">The Science Behind Algae-Based Textiles</a></li>
+            <li><a href="#" class="text-ocean-teal hover:underline">Sustainability Benefits of Algae Fabrics</a></li>
+            <li><a href="#" class="text-ocean-teal hover:underline">How Algae Textiles Are Changing Fashion</a></li>
+          </ul>
+        </section>
+        <section aria-label="Consumer Testimonials" class="bg-white rounded-lg shadow-lg p-6">
+          <h3 class="text-2xl font-semibold text-green-800 mb-4">What Our Customers Say</h3>
+          <blockquote class="text-green-700 italic mb-4">"Alyra's algae fabrics are incredibly soft and eco-friendly. I love wearing their clothes knowing I'm helping the planet!"</blockquote>
+          <cite class="block text-green-900 font-semibold">- Jane D.</cite>
+          <blockquote class="text-green-700 italic mt-6 mb-4">"Sustainable fashion has never looked so good. Alyra is leading the way with innovative materials."</blockquote>
+          <cite class="block text-green-900 font-semibold">- Mark S.</cite>
+        </section>
+      </div>
+    </section>
+
+    <section aria-label="Sustainability Commitment" class="mb-20">
+      <h2 class="text-4xl font-dm-serif text-ocean-teal mb-8 text-center">Our Commitment to Sustainability</h2>
+      <p class="text-green-700 max-w-3xl mx-auto text-center">
+        Alyra is dedicated to minimizing environmental impact through responsible sourcing, eco-friendly production, and circular fashion principles. We strive to create a positive impact on communities and ecosystems worldwide.
+      </p>
+    </section>
+  </main>
+</body>
+</html>
