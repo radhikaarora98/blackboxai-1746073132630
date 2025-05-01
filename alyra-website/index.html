@@ -13,15 +13,15 @@
   <style>
     body {
       font-family: 'Lora', serif;
-      background: #f0efe9; /* placeholder natural tone, will update with textures */
-      color: #2a3a2a; /* algae green dark */
+      background: #c0d6c1; /* darker green algae background */
+      color: #2f4f2f; /* darker green algae text */
     }
     /* Custom scrollbar for better aesthetics */
     ::-webkit-scrollbar {
       width: 8px;
     }
     ::-webkit-scrollbar-thumb {
-      background-color: #4a6a4a;
+      background-color: #3a6b3a; /* darker green algae medium */
       border-radius: 4px;
     }
     /* Animated logo keyframes */
@@ -38,50 +38,84 @@
       transition: color 0.3s ease, transform 0.3s ease;
     }
     nav a:hover {
-      color: #3b7a57; /* ocean teal */
+      color: #00796b; /* ocean green medium */
       transform: translateY(-3px);
     }
-  </style>
-</head>
-<body class="bg-gradient-to-b from-teal-100 via-green-100 to-sand-100 min-h-screen">
-  <!-- Sticky Navigation -->
-  <header class="sticky top-0 bg-green-50 bg-opacity-90 backdrop-blur-md shadow-md z-50">
-    <nav class="container mx-auto flex items-center justify-between py-4 px-6">
-      <div class="flex items-center space-x-3">
-        <div class="text-3xl font-dm-serif font-semibold text-green-800 logo-animated select-none" aria-label="Alyra logo" role="img">
-          ALYRA
-        </div>
-      </div>
-      <ul class="flex space-x-8 text-green-700 font-semibold text-lg">
-        <li><a href="index.html#home" class="flex items-center space-x-2"><i class="fas fa-home"></i><span>Home</span></a></li>
-        <li><a href="about.html" class="flex items-center space-x-2"><i class="fas fa-info-circle"></i><span>About</span></a></li>
-        <li><a href="collection.html" class="flex items-center space-x-2"><i class="fas fa-tshirt"></i><span>Collection</span></a></li>
-        <li><a href="sustainability.html" class="flex items-center space-x-2"><i class="fas fa-leaf"></i><span>Sustainability</span></a></li>
-        <li><a href="contact.html" class="flex items-center space-x-2"><i class="fas fa-envelope"></i><span>Contact</span></a></li>
-        <li><a href="cart.html" class="flex items-center space-x-2"><i class="fas fa-shopping-cart"></i><span>Cart</span></a></li>
-      </ul>
-    </nav>
-  </header>
+
+    /* Hero text animations */
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    @keyframes slideIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .animate-fade-in {
+      animation: fadeIn 1.5s ease forwards;
+    }
+    .animate-slide-in {
+      animation: slideIn 1.5s ease forwards;
+    }
+
+    /* Custom colors */
+    .text-beige-100 {
+      color: #e6e6d6;
+    }
+    .bg-beige-200 {
+      background-color: #d6d6b8;
+    }
+    .bg-beige-300 {
+      background-color: #c6c6a8;
+    }
+    .text-ocean-green {
+      color: #3a6b3a;
+    }
+    .hover\:text-beige-200:hover {
+      color: #d6d6b8;
+    }
+   </style>
+ </head>
+ <body class="bg-gradient-to-b from-teal-100 via-teal-100 to-teal-200 min-h-screen">
+   <!-- Sticky Navigation -->
+   <header class="sticky top-0 bg-[#5a8a5a] bg-opacity-90 backdrop-blur-md shadow-md z-50">
+     <nav class="container mx-auto flex items-center justify-between py-4 px-6">
+       <div class="flex items-center space-x-3">
+         <img src="assets/image/logo.png" alt="Alyra Logo" class="h-12 w-12 object-contain" />
+         <div class="text-3xl font-dm-serif font-semibold text-[#2f4f2f] logo-animated select-none" aria-label="Alyra logo" role="img">
+           ALYRA
+         </div>
+       </div>
+       <ul class="flex space-x-8 text-[#2f4f2f] font-semibold text-lg">
+         <li><a href="index.html#home" class="flex items-center space-x-2"><i class="fas fa-home"></i><span>Home</span></a></li>
+         <li><a href="about.html" class="flex items-center space-x-2"><i class="fas fa-info-circle"></i><span>About</span></a></li>
+         <li><a href="collection.html" class="flex items-center space-x-2"><i class="fas fa-tshirt"></i><span>Collection</span></a></li>
+         <li><a href="material.html" class="flex items-center space-x-2"><i class="fas fa-leaf"></i><span>Material</span></a></li>
+         <li><a href="contact.html" class="flex items-center space-x-2"><i class="fas fa-envelope"></i><span>Contact</span></a></li>
+         <li><a href="cart.html" class="flex items-center space-x-2"><i class="fas fa-shopping-cart"></i><span>Cart</span></a></li>
+       </ul>
+     </nav>
+   </header>
 
   <!-- Homepage Hero Section -->
   <section id="home" class="relative w-full h-screen overflow-hidden">
-    <!-- Removed video background due to missing asset -->
-    <div class="absolute inset-0 bg-gradient-to-b from-teal-900/40 via-green-900/30 to-sand-900/40"></div>
+    <img src="https://i.ibb.co/bj2TMCGH/IMG-4340.jpg" alt="Underwater Algae Background" class="absolute inset-0 w-full h-full object-cover" />
+    <div class="absolute inset-0 bg-black bg-opacity-40"></div>
     <div class="relative z-10 flex flex-col items-center justify-center h-full text-center px-4">
-      <h1 class="text-7xl md:text-9xl font-dm-serif text-seafoam-beige animate-fade-in-out select-none" style="color:#d9e6d2;">ALYRA</h1>
-      <p class="mt-4 text-2xl md:text-4xl font-lora text-seafoam-beige animate-fade-in-out delay-500" style="color:#c7d9c4;">Wear the Future</p>
-      <button id="exploreBtn" class="mt-10 px-8 py-3 bg-ocean-teal text-sand-200 font-semibold rounded-full shadow-lg hover:bg-ocean-teal/80 transition duration-300" aria-label="Explore the Future">
+      <h1 class="text-7xl md:text-9xl font-dm-serif text-beige-100 animate-fade-in select-none drop-shadow-lg" style="animation-delay: 0.3s;">ALYRA</h1>
+      <p class="mt-4 text-2xl md:text-4xl font-lora text-beige-100 animate-slide-in delay-500 drop-shadow-md" style="animation-delay: 0.8s;">Wear the Future</p>
+      <button id="exploreBtn" class="mt-10 px-8 py-3 bg-beige-200 text-ocean-green font-semibold rounded-full shadow-lg hover:bg-beige-300 transition duration-300" aria-label="Explore the Future">
         Explore the Future
       </button>
       <!-- Interactive clickable icons -->
       <div class="absolute bottom-20 flex space-x-8">
-        <a href="sustainability.html" aria-label="Go to Sustainability" class="text-ocean-teal hover:text-algae-green transition duration-300">
+        <a href="sustainability.html" aria-label="Go to Sustainability" class="text-ocean-green hover:text-beige-200 transition duration-300">
           <i class="fas fa-leaf fa-2x"></i>
         </a>
-        <a href="about.html" aria-label="Go to About" class="text-ocean-teal hover:text-algae-green transition duration-300">
+        <a href="about.html" aria-label="Go to About" class="text-ocean-green hover:text-beige-200 transition duration-300">
           <i class="fas fa-info-circle fa-2x"></i>
         </a>
-        <a href="collection.html" aria-label="Go to Collection" class="text-ocean-teal hover:text-algae-green transition duration-300">
+        <a href="collection.html" aria-label="Go to Collection" class="text-ocean-green hover:text-beige-200 transition duration-300">
           <i class="fas fa-tshirt fa-2x"></i>
         </a>
       </div>
@@ -100,26 +134,25 @@
   <section id="featured-products" class="py-20 px-6 bg-gradient-to-b from-sand-100 to-sand-200">
     <h2 class="text-4xl md:text-5xl font-dm-serif text-algae-green mb-12 text-center">Featured Products</h2>
     <div class="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
-      <!-- Product Card Example -->
       <div class="group relative bg-white rounded-lg shadow-lg overflow-hidden cursor-pointer">
-        <img src="https://via.placeholder.com/400x288?text=Ocean+Whisper+Kaftan" alt="Ocean Whisper Kaftan" class="w-full h-72 object-cover transition-transform duration-300 group-hover:scale-105" />
+        <img src="assets/image/dress1.jpg" alt="Ocean Breeze Dress" class="w-full h-72 object-cover transition-transform duration-300 group-hover:scale-105" />
         <div class="absolute inset-0 bg-algae-green bg-opacity-70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center p-4 text-white">
-          <p class="mb-4 italic text-lg">Ocean Whisper Kaftan</p>
-          <button class="px-6 py-2 border border-white rounded-full hover:bg-white hover:text-algae-green transition duration-300">Inquire Now</button>
+          <p class="mb-4 italic text-lg">Ocean Breeze Dress</p>
+          <button onclick="location.href='product-detail.html?product=ocean-breeze-dress'" class="px-6 py-2 border border-white rounded-full hover:bg-white hover:text-algae-green transition duration-300">Inquire Now</button>
         </div>
       </div>
       <div class="group relative bg-white rounded-lg shadow-lg overflow-hidden cursor-pointer">
-        <img src="https://via.placeholder.com/400x288?text=Tideflow+Dress" alt="Tideflow Dress" class="w-full h-72 object-cover transition-transform duration-300 group-hover:scale-105" />
+        <img src="assets/image/kaftan1.jpg" alt="Algae Flow Dress" class="w-full h-72 object-cover transition-transform duration-300 group-hover:scale-105" />
         <div class="absolute inset-0 bg-algae-green bg-opacity-70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center p-4 text-white">
-          <p class="mb-4 italic text-lg">Tideflow Dress</p>
-          <button class="px-6 py-2 border border-white rounded-full hover:bg-white hover:text-algae-green transition duration-300">Inquire Now</button>
+          <p class="mb-4 italic text-lg">Algae Flow Dress</p>
+          <button onclick="location.href='product-detail.html?product=algae-flow-dress'" class="px-6 py-2 border border-white rounded-full hover:bg-white hover:text-algae-green transition duration-300">Inquire Now</button>
         </div>
       </div>
       <div class="group relative bg-white rounded-lg shadow-lg overflow-hidden cursor-pointer">
-        <img src="https://via.placeholder.com/400x288?text=Seafoam+Breeze+Top" alt="Seafoam Breeze Top" class="w-full h-72 object-cover transition-transform duration-300 group-hover:scale-105" />
+        <img src="assets/image/top1.jpg" alt="Seafoam Breeze Top" class="w-full h-72 object-cover transition-transform duration-300 group-hover:scale-105" />
         <div class="absolute inset-0 bg-algae-green bg-opacity-70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center p-4 text-white">
           <p class="mb-4 italic text-lg">Seafoam Breeze Top</p>
-          <button class="px-6 py-2 border border-white rounded-full hover:bg-white hover:text-algae-green transition duration-300">Inquire Now</button>
+          <button onclick="location.href='product-detail.html?product=seafoam-breeze-top'" class="px-6 py-2 border border-white rounded-full hover:bg-white hover:text-algae-green transition duration-300">Inquire Now</button>
         </div>
       </div>
     </div>
@@ -151,6 +184,63 @@
       <a href="#" aria-label="Facebook" class="hover:text-ocean-teal transition duration-300"><i class="fab fa-facebook-f"></i></a>
       <a href="#" aria-label="Twitter" class="hover:text-ocean-teal transition duration-300"><i class="fab fa-twitter"></i></a>
       <a href="#" aria-label="Pinterest" class="hover:text-ocean-teal transition duration-300"><i class="fab fa-pinterest-p"></i></a>
+    </div>
+  </section>
+
+  <!-- Enhanced Brand Section -->
+  <section id="brand-story" class="py-20 px-6 bg-[#c6c6a8] text-[#3a6b3a]">
+    <h2 class="text-4xl md:text-5xl font-dm-serif mb-12 text-center">Where Nature Wears You</h2>
+    <div class="flex justify-center space-x-8 max-w-4xl mx-auto">
+      <a href="#origin" class="min-w-[300px] max-w-xs p-6 bg-[#d6d6b8] rounded-lg shadow-lg transform transition duration-500 hover:scale-105 focus:outline-none focus:ring-4 focus:ring-[#3a6b3a]">
+        <h3 class="text-2xl font-semibold mb-4">Our Origin</h3>
+      </a>
+      <a href="#mission" class="min-w-[300px] max-w-xs p-6 bg-[#d6d6b8] rounded-lg shadow-lg transform transition duration-500 hover:scale-105 focus:outline-none focus:ring-4 focus:ring-[#3a6b3a]">
+        <h3 class="text-2xl font-semibold mb-4">Our Mission</h3>
+      </a>
+      <a href="#vision" class="min-w-[300px] max-w-xs p-6 bg-[#d6d6b8] rounded-lg shadow-lg transform transition duration-500 hover:scale-105 focus:outline-none focus:ring-4 focus:ring-[#3a6b3a]">
+        <h3 class="text-2xl font-semibold mb-4">Our Vision</h3>
+      </a>
+    </div>
+
+    <!-- Dialogs -->
+    <section id="origin" class="max-w-4xl mx-auto my-12 p-6 bg-[#d6d6b8] rounded-lg shadow-lg">
+      <h3 class="text-3xl font-semibold mb-4">Our Origin</h3>
+      <p>Inspired by the ocean's algae, Alyra pioneers sustainable fashion with innovative algae-based fabrics.</p>
+    </section>
+    <section id="mission" class="max-w-4xl mx-auto my-12 p-6 bg-[#d6d6b8] rounded-lg shadow-lg">
+      <h3 class="text-3xl font-semibold mb-4">Our Mission</h3>
+      <p>To blend nature's wisdom with cutting-edge design, creating elegant, eco-friendly apparel.</p>
+    </section>
+    <section id="vision" class="max-w-4xl mx-auto my-12 p-6 bg-[#d6d6b8] rounded-lg shadow-lg">
+      <h3 class="text-3xl font-semibold mb-4">Our Vision</h3>
+      <p>Leading a new thread of change in fashion, where sustainability meets style and innovation.</p>
+    </section>
+  </section>
+
+  <!-- Process Section -->
+  <section id="process" class="py-20 px-6 bg-beige-300 text-ocean-green">
+    <h2 class="text-4xl md:text-5xl font-dm-serif mb-12 text-center">From Algae to Attire</h2>
+    <div class="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-4 gap-8 text-center">
+      <div class="flex flex-col items-center space-y-4 animate-fade-in">
+        <i class="fas fa-water text-6xl"></i>
+        <h3 class="text-2xl font-semibold">Algae Harvest</h3>
+        <p>Collecting sustainable algae from pristine waters.</p>
+      </div>
+      <div class="flex flex-col items-center space-y-4 animate-fade-in delay-200">
+        <i class="fas fa-flask text-6xl"></i>
+        <h3 class="text-2xl font-semibold">Blending</h3>
+        <p>Innovative blending of algae fibers with organic materials.</p>
+      </div>
+      <div class="flex flex-col items-center space-y-4 animate-fade-in delay-400">
+        <i class="fas fa-cogs text-6xl"></i>
+        <h3 class="text-2xl font-semibold">Spinning</h3>
+        <p>Transforming fibers into soft, durable yarns.</p>
+      </div>
+      <div class="flex flex-col items-center space-y-4 animate-fade-in delay-600">
+        <i class="fas fa-tshirt text-6xl"></i>
+        <h3 class="text-2xl font-semibold">Garment Making</h3>
+        <p>Crafting elegant apparel with sustainable fabrics.</p>
+      </div>
     </div>
   </section>
 
