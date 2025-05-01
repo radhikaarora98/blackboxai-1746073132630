@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Material - Alyra Sustainable Fashion</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Lora&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <style>
+    body {
+      font-family: 'Lora', serif;
+      background: #c0d6c1; /* darker green algae background */
+      color: #2f4f2f; /* darker green algae text */
+    }
+    h1, h2, h3 {
+      font-family: 'DM Serif Display', serif;
+    }
+    .content {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 1rem;
+      background-color: #d6d6b8;
+      border-radius: 0.75rem;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+    .section {
+      margin-bottom: 2rem;
+    }
+    .section h2 {
+      margin-bottom: 1rem;
+      color: #3a6b3a;
+    }
+    .images {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+      margin-top: 1rem;
+    }
+    .images img {
+      max-width: 45%;
+      border-radius: 0.5rem;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+<body class="bg-gradient-to-b from-[#3a6b3a] via-[#2f4f2f] to-[#3a6b3a] min-h-screen">
+  <header class="sticky top-0 bg-[#5a8a5a] bg-opacity-90 backdrop-blur-md shadow-md z-50">
+    <nav class="container mx-auto flex items-center justify-between py-4 px-6">
+      <div class="flex items-center space-x-3">
+        <img src="assets/image/logo.png" alt="Alyra Logo" class="h-12 w-12 object-contain" />
+        <div class="text-3xl font-dm-serif font-semibold text-[#2f4f2f] select-none">ALYRA</div>
+      </div>
+      <ul class="flex space-x-8 text-[#2f4f2f] font-semibold text-lg">
+        <li><a href="index.html#home" class="flex items-center space-x-2"><i class="fas fa-home"></i><span>Home</span></a></li>
+        <li><a href="about.html" class="flex items-center space-x-2"><i class="fas fa-info-circle"></i><span>About</span></a></li>
+        <li><a href="collection.html" class="flex items-center space-x-2"><i class="fas fa-tshirt"></i><span>Collection</span></a></li>
+        <li><a href="material.html" class="flex items-center space-x-2"><i class="fas fa-leaf"></i><span>Material</span></a></li>
+        <li><a href="contact.html" class="flex items-center space-x-2"><i class="fas fa-envelope"></i><span>Contact</span></a></li>
+        <li><a href="cart.html" class="flex items-center space-x-2"><i class="fas fa-shopping-cart"></i><span>Cart</span></a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="content">
+    <h1 class="text-4xl mb-6">Algae Fabric & Clothing</h1>
+    <section class="section">
+      <p>
+        Our algae-based fabrics are soft, breathable, and sustainable. They offer a unique texture and feel that is both luxurious and eco-friendly.
+      </p>
+      <p>
+        Certified for quality and sustainability, our materials meet rigorous standards to ensure durability and environmental responsibility.
+      </p>
+      <div class="images">
+        <img src="https://i.ibb.co/rKkZ705v/IMG-4093.jpg" alt="Algae Fabric" />
+        <img src="https://i.ibb.co/Xxyx4Y63/IMG-4096.jpg" alt="Algae Clothing" />
+      </div>
+    </section>
+    <section class="section">
+      <h2>Corporate Social Responsibility (CSR)</h2>
+      <p>
+        At Alyra, sustainability is at the core of everything we do. We are committed to reducing our environmental footprint by using algae-based fabrics that are renewable and biodegradable.
+      </p>
+      <p>
+        Our CSR initiatives include supporting ocean conservation projects, reducing waste in our production processes, and ensuring fair labor practices throughout our supply chain.
+      </p>
+      <div class="images">
+        <img src="https://i.ibb.co/7tC15Fzt/IMG-4296.jpg" alt="CSR Image 1" />
+        <img src="https://i.ibb.co/n8LPs9wL/IMG-4056.jpg" alt="CSR Image 2" />
+      </div>
+    </section>
+  </main>
+
+</body>
+</html>
