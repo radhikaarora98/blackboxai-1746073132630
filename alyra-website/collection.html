@@ -10,8 +10,8 @@
   <style>
     body {
       font-family: 'Lora', serif;
-      background: #f0efe9;
-      color: #2a3a2a;
+      background: #e0f2f1; /* ocean green light background */
+      color: #004d40; /* ocean green dark */
     }
     .masonry {
       column-count: 3;
@@ -38,11 +38,11 @@
       width: 100%;
       height: 250px;
       object-fit: cover;
-      border-bottom: 4px solid #3b7a57;
+      border-bottom: 4px solid #00796b;
     }
     .filter-btn {
-      background-color: #d9e6d2;
-      color: #3b7a57;
+      background-color: #b2dfdb;
+      color: #00796b;
       border-radius: 9999px;
       padding: 0.5rem 1rem;
       font-weight: 600;
@@ -50,16 +50,19 @@
       transition: background-color 0.3s ease;
     }
     .filter-btn:hover, .filter-btn.active {
-      background-color: #3b7a57;
-      color: #d9e6d2;
+      background-color: #00796b;
+      color: #b2dfdb;
     }
   </style>
 </head>
 <body class="bg-gradient-to-b from-teal-100 via-green-100 to-sand-100 min-h-screen">
   <header class="sticky top-0 bg-green-50 bg-opacity-90 backdrop-blur-md shadow-md z-50">
     <nav class="container mx-auto flex items-center justify-between py-4 px-6">
-      <div class="text-3xl font-dm-serif font-semibold text-green-800 select-none">ALYRA</div>
-      <ul class="flex space-x-8 text-green-700 font-semibold text-lg">
+      <div class="flex items-center space-x-3">
+        <img src="assets/image/logo.png" alt="Alyra Logo" class="h-12 w-12 object-contain" />
+        <div class="text-3xl font-dm-serif font-semibold text-teal-800 select-none">ALYRA</div>
+      </div>
+      <ul class="flex space-x-8 text-teal-700 font-semibold text-lg">
         <li><a href="index.html#home" class="flex items-center space-x-2"><i class="fas fa-home"></i><span>Home</span></a></li>
         <li><a href="about.html" class="flex items-center space-x-2"><i class="fas fa-info-circle"></i><span>About</span></a></li>
         <li><a href="collection.html" class="flex items-center space-x-2"><i class="fas fa-tshirt"></i><span>Collection</span></a></li>
@@ -88,23 +91,58 @@
     <!-- Masonry Product Cards -->
     <div class="masonry" id="productGrid">
       <div class="product-card fluid-forms color-green fabric-algae availability-inquire">
-        <img src="assets/images/kaftan1.jpg" alt="Ocean Whisper Kaftan" class="product-image" />
+        <img src="assets/image/dress1.jpg" alt="Ocean Breeze Dress" class="product-image" />
         <div class="p-4">
-          <h2 class="font-semibold text-lg italic">Ocean Whisper Kaftan</h2>
-          <button class="mt-2 px-4 py-2 border border-green-700 rounded-full text-green-700 hover:bg-green-700 hover:text-white transition">Inquire Now</button>
+          <h2 class="font-semibold text-lg italic">Ocean Breeze Dress</h2>
+          <button onclick="location.href='product-detail.html?product=ocean-breeze-dress'" class="mt-2 px-4 py-2 border border-green-700 rounded-full text-green-700 hover:bg-green-700 hover:text-white transition">Inquire Now</button>
         </div>
       </div>
       <div class="product-card ocean-breath color-beige fabric-algae availability-inquire">
-        <img src="assets/images/top1.jpg" alt="Seafoam Breeze Top" class="product-image" />
+        <img src="assets/image/kaftan1.jpg" alt="Algae Flow Dress" class="product-image" />
+        <div class="p-4">
+          <h2 class="font-semibold text-lg italic">Algae Flow Dress</h2>
+          <button class="mt-2 px-4 py-2 border border-green-700 rounded-full text-green-700 hover:bg-green-700 hover:text-white transition">Inquire Now</button>
+        </div>
+      </div>
+      <div class="product-card tideflow color-green fabric-algae availability-inquire">
+        <img src="assets/image/top1.jpg" alt="Seafoam Breeze Top" class="product-image" />
         <div class="p-4">
           <h2 class="font-semibold text-lg italic">Seafoam Breeze Top</h2>
           <button class="mt-2 px-4 py-2 border border-green-700 rounded-full text-green-700 hover:bg-green-700 hover:text-white transition">Inquire Now</button>
         </div>
       </div>
       <div class="product-card tideflow color-green fabric-algae availability-inquire">
-        <img src="assets/images/dress1.jpg" alt="Tideflow Dress" class="product-image" />
+        <img src="assets/image/team1.jpg" alt="Coral Reef Dress" class="product-image" />
         <div class="p-4">
-          <h2 class="font-semibold text-lg italic">Tideflow Dress</h2>
+          <h2 class="font-semibold text-lg italic">Coral Reef Dress</h2>
+          <button class="mt-2 px-4 py-2 border border-green-700 rounded-full text-green-700 hover:bg-green-700 hover:text-white transition">Inquire Now</button>
+        </div>
+      </div>
+      <div class="product-card tideflow color-green fabric-algae availability-inquire">
+        <img src="assets/image/team2.jpg" alt="Algae Bloom Dress" class="product-image" />
+        <div class="p-4">
+          <h2 class="font-semibold text-lg italic">Algae Bloom Dress</h2>
+          <button class="mt-2 px-4 py-2 border border-green-700 rounded-full text-green-700 hover:bg-green-700 hover:text-white transition">Inquire Now</button>
+        </div>
+      </div>
+      <div class="product-card tideflow color-green fabric-algae availability-inquire">
+        <img src="assets/image/team3.jpg" alt="Seaside Serenity Dress" class="product-image" />
+        <div class="p-4">
+          <h2 class="font-semibold text-lg italic">Seaside Serenity Dress</h2>
+          <button class="mt-2 px-4 py-2 border border-green-700 rounded-full text-green-700 hover:bg-green-700 hover:text-white transition">Inquire Now</button>
+        </div>
+      </div>
+      <div class="product-card tideflow color-green fabric-algae availability-inquire">
+        <img src="assets/image/blog1.jpg" alt="Ocean Mist Dress" class="product-image" />
+        <div class="p-4">
+          <h2 class="font-semibold text-lg italic">Ocean Mist Dress</h2>
+          <button class="mt-2 px-4 py-2 border border-green-700 rounded-full text-green-700 hover:bg-green-700 hover:text-white transition">Inquire Now</button>
+        </div>
+      </div>
+      <div class="product-card tideflow color-green fabric-algae availability-inquire">
+        <img src="assets/image/blog2.jpg" alt="Tidal Wave Dress" class="product-image" />
+        <div class="p-4">
+          <h2 class="font-semibold text-lg italic">Tidal Wave Dress</h2>
           <button class="mt-2 px-4 py-2 border border-green-700 rounded-full text-green-700 hover:bg-green-700 hover:text-white transition">Inquire Now</button>
         </div>
       </div>
