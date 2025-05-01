@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Draped in Ocean Light - Alyra</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Lora&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <style>
+    body {
+      font-family: 'Lora', serif;
+      background: #f0efe9;
+      color: #2a3a2a;
+    }
+    .zoom-container {
+      overflow: hidden;
+      cursor: zoom-in;
+    }
+    .zoom-container img {
+      transition: transform 0.3s ease;
+      width: 100%;
+      height: auto;
+      max-height: 500px;
+      object-fit: cover;
+    }
+    .zoom-container.zoomed img {
+      transform: scale(2);
+      cursor: zoom-out;
+    }
+    .styled-with img {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 0.5rem;
+      border: 2px solid #3b7a57;
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+    .styled-with img:hover {
+      transform: scale(1.1);
+    }
+  </style>
+</head>
+<body class="bg-gradient-to-b from-teal-100 via-green-100 to-sand-100 min-h-screen">
+  <header class="sticky top-0 bg-green-50 bg-opacity-90 backdrop-blur-md shadow-md z-50">
+    <nav class="container mx-auto flex items-center justify-between py-4 px-6">
+      <div class="text-3xl font-dm-serif font-semibold text-green-800 select-none">ALYRA</div>
+      <ul class="flex space-x-8 text-green-700 font-semibold text-lg">
+        <li><a href="index.html" class="flex items-center space-x-2"><i class="fas fa-home"></i><span>Home</span></a></li>
+        <li><a href="about.html" class="flex items-center space-x-2"><i class="fas fa-info-circle"></i><span>About</span></a></li>
+        <li><a href="collection.html" class="flex items-center space-x-2"><i class="fas fa-tshirt"></i><span>Collection</span></a></li>
+        <li><a href="sustainability.html" class="flex items-center space-x-2"><i class="fas fa-leaf"></i><span>Sustainability</span></a></li>
+        <li><a href="contact.html" class="flex items-center space-x-2"><i class="fas fa-envelope"></i><span>Contact</span></a></li>
+        <li><a href="cart.html" class="flex items-center space-x-2"><i class="fas fa-shopping-cart"></i><span>Cart</span></a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container mx-auto px-6 py-12">
+    <h1 class="text-5xl font-dm-serif text-ocean-teal mb-8 text-center">Draped in Ocean Light</h1>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+      <!-- Image/Video Section with Zoom -->
+      <div class="zoom-container" id="zoomContainer" aria-label="Product image with zoom feature">
+        <img src="assets/images/draped-ocean-light.jpg" alt="Draped in Ocean Light product image" />
+      </div>
+
+      <!-- Product Details -->
+      <div>
+        <h2 class="text-3xl font-semibold mb-4">Description</h2>
+        <p class="mb-6">Experience the elegance of sustainable fashion with our Draped in Ocean Light dress, crafted from innovative algae-based textiles that flow like the ocean breeze.</p>
+
+        <h2 class="text-3xl font-semibold mb-4">Materials</h2>
+        <ul class="list-disc list-inside mb-6">
+          <li>Algae-based fabric blend</li>
+          <li>Eco-friendly dyes</li>
+          <li>Recycled fibers</li>
+        </ul>
+
+        <h2 class="text-3xl font-semibold mb-4">Care Guide</h2>
+        <p class="mb-6">Hand wash cold, lay flat to dry, avoid bleach and harsh chemicals to preserve fabric integrity.</p>
+
+        <h2 class="text-3xl font-semibold mb-4">Inquiry Form</h2>
+        <form class="mb-8" aria-label="Product inquiry form">
+          <label for="name" class="block mb-2 font-semibold">Name</label>
+          <input type="text" id="name" name="name" class="w-full mb-4 p-2 border border-green-700 rounded" required />
+
+          <label for="email" class="block mb-2 font-semibold">Email</label>
+          <input type="email" id="email" name="email" class="w-full mb-4 p-2 border border-green-700 rounded" required />
+
+          <label for="message" class="block mb-2 font-semibold">Message</label>
+          <textarea id="message" name="message" rows="4" class="w-full mb-4 p-2 border border-green-700 rounded" placeholder="Your inquiry about this product" required></textarea>
+
+          <button type="submit" class="px-6 py-3 bg-ocean-teal text-sand-200 font-semibold rounded-full hover:bg-ocean-teal/80 transition">Submit Inquiry</button>
+        </form>
+
+        <h2 class="text-3xl font-semibold mb-4">Styled With</h2>
+        <div class="styled-with flex space-x-4">
+          <img src="assets/images/kaftan1.jpg" alt="Ocean Whisper Kaftan" title="Ocean Whisper Kaftan" />
+          <img src="assets/images/top1.jpg" alt="Seafoam Breeze Top" title="Seafoam Breeze Top" />
+          <img src="assets/images/dress1.jpg" alt="Tideflow Dress" title="Tideflow Dress" />
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    // Zoom functionality
+    const zoomContainer = document.getElementById('zoomContainer');
+    zoomContainer.addEventListener('click', () => {
+      zoomContainer.classList.toggle('zoomed');
+    });
+  </script>
+</body>
+</html>
